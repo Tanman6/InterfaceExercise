@@ -8,6 +8,7 @@ namespace InterfaceExercise
         static void Main(string[] args)
         {
             var vehicles = new List<IVehicle>();
+            var companyList = new List<ICompany>();
 
             var car = new Car { IsSadan = true, IsConvertable = false, Has4Wheels = true, Noise = "vrrr vrrrrr", NumberOfDoors = 2, HasSunRoof = true, HasLogo = true, Motto = "Think Small" };
 
@@ -19,21 +20,28 @@ namespace InterfaceExercise
             vehicles.Add(truck);
             vehicles.Add(suv);
 
-            foreach(var vehicle in vehicles)
+            companyList.Add(car);
+            companyList.Add(truck);
+            companyList.Add(suv);
+
+            foreach (var vehicle in vehicles)
             {
                 Console.WriteLine($"Does this vehicle have four wheels?: {vehicle.Has4Wheels}");
-                Console.WriteLine($"Noise: ");
-                Console.WriteLine($"Number of Doors: ");
-                Console.WriteLine($"Does this vehicle have a sun roof?: ");
-                Console.WriteLine($"Company motto for this vehicle: ");
-                Console.WriteLine($"Does this company have a logo?: ");
+                Console.WriteLine($"Noise: {vehicle.Noise}");
+                Console.WriteLine($"Number of Doors: {vehicle.NumberOfDoors}");
+                Console.WriteLine($"Does this vehicle have a sun roof?: {vehicle.HasSunRoof}");
                 Console.WriteLine();
-
-
+                foreach (var v1 in companyList)
+                {
+                    Console.WriteLine($"Company motto for this vehicle: {v1.Motto}");
+                    Console.WriteLine($"Does this company have a logo?: {v1.HasLogo}");
+                }
             }
 
+
+
             Console.WriteLine($"Is the car a sadan?: {car.IsSadan}");
-            Console.WriteLine($"Is the car a convertable?: ");
+            Console.WriteLine($"Is the car a convertable?: {car.IsConvertable}");
             Console.WriteLine();
 
             Console.WriteLine($"The truck's bed size in feet is: {truck.BedSizeInFeet}");
