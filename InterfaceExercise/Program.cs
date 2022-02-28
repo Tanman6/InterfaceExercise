@@ -30,16 +30,16 @@ namespace InterfaceExercise
                 Console.WriteLine($"Noise: {vehicle.Noise}");
                 Console.WriteLine($"Number of Doors: {vehicle.NumberOfDoors}");
                 Console.WriteLine($"Does this vehicle have a sun roof?: {vehicle.HasSunRoof}");
-                
-                foreach (var v1 in companyList)
-                {
-                    Console.WriteLine($"Company motto for this vehicle: {v1.Motto}");
-                    Console.WriteLine($"Does this company have a logo?: {v1.HasLogo}");
-                    Console.WriteLine();
-                }
+                Console.WriteLine();
+
             }
 
-
+            foreach (var v1 in companyList)
+            {
+                Console.WriteLine($"Company motto for this vehicle: {v1.Motto}");
+                Console.WriteLine($"Does this company have a logo?: {v1.HasLogo}");
+                Console.WriteLine();
+            }
 
             Console.WriteLine($"Is the car a sadan?: {car.IsSadan}");
             Console.WriteLine($"Is the car a convertable?: {car.IsConvertable}");
